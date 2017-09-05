@@ -24,18 +24,12 @@ function deepestChild() {
 
 function increaseRankBy(n) {
   const rankedLists = document.querySelectorAll('.ranked-list');
-  const firstList = rankedLists[0];
-  const secondList = rankedLists[1];
-  let children = firstList.children;
-  let start = 1
-  for(let i=0;i<children.length;i++) {
-    children[i].innerHTML = parseInt(children[i].innerHTML)+n;
-  }
 
-  children = secondList.children;
-  start = 12
-  for(let i=0;i<children.length;i++) {
-    children[i].innerHTML = parseInt(children[i].innerHTML)+n;
-  }
+  for(let i=0; i < rankedLists.length; i++) {
+    let children = firstList.children;
 
+    for (let j=0; j < children.length; j++) {
+      children[j].innerHTML = parseInt(children[i].innerHTML)+n;
+    }
+  }
 }
